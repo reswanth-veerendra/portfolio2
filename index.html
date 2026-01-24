@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reswanth | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Buda:wght@300&family=Lobster&family=Macondo&display=swap" rel="stylesheet">
+ <script src="https://kit.fontawesome.com/2f2d4963fb.js" crossorigin="anonymous"></script>
+ 
+ <style>
+    .buda-light {
+  font-family: "Buda", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.macondo-regular {
+  font-family: "Macondo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: "Segoe UI", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body{
+      min-height:100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color:#e8f9ff;
+    }
+    
+    .glass{
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius:20px;
+      border:1px solid rgba(0,245,255,0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    nav{
+      position: sticky;
+      top:0;
+      z-index:100;
+      margin:18px;
+      padding:18px 35px;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+    }
+
+    nav:hover{
+      box-shadow: 0 15px 45px rgba(0,245,255,0.25);
+    }
+
+    nav h2{
+      color:#00f5ff;
+      letter-spacing:1.5px;
+      font-weight:600;
+      padding: 5px;
+      font-family: "Buda", serif;
+
+      
+    }
+
+    nav a{
+      margin: 12px;
+      text-decoration:none;
+      color:#e8f9ff;
+      font-weight:500;
+      opacity:0.85;
+      position: relative;
+
+    }
+
+
+    nav a:hover{
+      opacity:1;
+      color:#00f5ff;
+      transform: translateY(-2px);
+
+    }
+    header{
+      margin:35px 22px;
+      padding:45px;
+      text-align:center;
+    }
+
+    header:hover{
+      transform: translateY(-4px);
+    }
+.profile-wrap{
+  width:250px;
+  height:250px;
+  margin:0 auto 20px;
+  border-radius:50%;
+  box-shadow:0 15px 40px rgba(0,245,255,0.45);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.profile-wrap:hover{
+  transform: scale(1.08);
+  box-shadow:0 25px 65px rgba(0,245,255,0.7);
+}
+.profile{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  clip-path: circle(50% at 50% 50%);
+  background: radial-gradient(circle, #00f5ff, #007b8a);
+}
+.profile img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+
+
+    header h1{
+      font-size:2.5em;
+      margin-bottom:6px;
+      font-family: "Buda","serif";
+      color: aquamarine;
+    }
+
+    header p{
+      font-size:1.15em;
+     font-family: "Macondo", cursive;
+
+    }
+    main{
+      display:flex;
+      flex-direction: row;
+      column-gap:30px;
+      padding:25px;
+    }
+
+    section, aside{
+      padding:28px;
+    }
+    article{
+      padding:24px;
+      margin-bottom:22px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    article:hover{
+      transform: translateY(-8px);
+      box-shadow:
+        0 20px 45px rgba(0,245,255,0.25),
+        0 10px 30px rgba(0,0,0,0.7);
+    }
+
+    article h2{
+      margin-bottom:12px;
+      padding-bottom:8px;
+      border-bottom:1px solid rgba(0,245,255,0.4);
+      color:#00f5ff;
+    }
+
+    article p{
+      line-height:1.7;
+    }
+    #projects{
+      text-align: center;
+
+    }
+    #projects a{
+      text-decoration: none;
+  display: block;
+  margin: 8px 0;
+  color: #e8f9ff;
+}
+#projects a:hover{
+  color: #00f5ff;
+}
+
+    aside h3{
+      color:#00f5ff;
+      border-bottom: 1px solid rgba(0,245,255,0.25);
+      margin-bottom:14px;
+    }
+    aside li{
+      margin:12px 0;
+      transition: transform 0.25s ease, color 0.25s ease;
+    }
+
+    aside li:hover{
+      transform: translateX(6px);
+      color:#00f5ff;
+    }
+footer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin: 40px 25px 25px;
+  padding: 35px 25px;
+  border-top: 1px solid rgba(0,245,255,0.35);
+  background: rgba(255,255,255,0.06);
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+footer p{
+  
+}
+
+footer h3{
+  font-family: "Buda", serif;
+  font-weight: 400;
+  color: #00f5ff;
+  letter-spacing: 1px;
+}
+.icons{
+  display: flex;
+  gap: 18px;
+  margin-top: 8px;
+}
+.icons i{
+  padding: 12px;
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.icons i:hover{
+  transform: translateY(-6px) scale(1.05);
+  box-shadow:
+    0 15px 35px rgba(0,245,255,0.55),
+    0 5px 15px rgba(0,0,0,0.6);
+}
+footer:hover{
+  box-shadow: 0 20px 50px rgba(0,245,255,0.2);
+}
+
+.fa-brands.fa-instagram.fa-2x{
+    background: radial-gradient(circle at 30% 107%,
+        #fdf497 0%, #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+
+}
+
+.fa-brands.fa-facebook.fa-2x{
+    color: rgb(86, 193, 255);
+}
+.fa-brands.fa-linkedin.fa-2x{
+    color: rgb(35, 172, 252);
+}
+   @media(max-width:900px){
+  main{
+    flex-direction: column;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <nav class="glass">
+    <h2>My Portfolio</h2>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </div>
+  </nav>
+  <header class="glass">
+    <div class="profile-wrap">
+  <div class="profile">
+    <img src="1000100428.jpg">
+  </div>
+</div>
+
+    <h1>Reswanth Veerendra Karri</h1>
+    <p>ECE Student • Curious Learner • Tech Enthusiast</p>
+
+  </header>
+  <main>
+
+    <section class="glass">
+      <article id="about" class="glass">
+        <h2>About Me</h2>
+        <p>
+  I am a B.Tech Electronics and Communication Engineering student at NIT Durgapur
+  with an interest in learning and self-improvement.
+  I enjoy working in teams, taking responsibility, and adapting to new environments.
+  Along with academics, I believe in developing communication skills and a disciplined mindset.
+</p>
+
+      </article>
+
+      <article id="projects" class="glass">
+        <h2>Projects</h2>
+        <a href="https://reswanth-veerendra.github.io/Counter/" target="_blank">Counter Website</a>
+        <a href="https://reswanth-veerendra.github.io/dicerollf/" target="_blank">🎲 Dice Roller Web App</a>
+        <a href="https://reswanth-veerendra.github.io/password/" target="_blank">🔐 Password Generator</a>
+        <a href="#">🌐 Personal Portfolio Website</a>
+      </article>
+
+      <article id="skills" class="glass">
+        <h2>Skills</h2>
+        <p>HTML • CSS </p>
+        <p>C Programming</p>
+        <p>Teamwork • Communication • Time Management</p>
+      <p>Quick Learner</p>
+
+      </article>
+    </section>
+
+    <aside class="glass">
+      <h3>Quick Info</h3>
+      <ul>
+        <li>🎓 B.Tech (ECE)</li>
+        <li>🏫 NIT Durgapur</li>
+        <li>💻  Aspiring Web Developer</li>
+        <li>📧 reswanthveerendrakarri@gmail.com</li>
+      </ul>
+    </aside>
+
+  </main>
+ <footer id="footer" class="glass">
+    <p>© 2026</p>
+            <h3>Developed by Reswanth</h3>
+        <div class="icons">
+       <a href="https://www.facebook.com/profile.php?id=61576941945295" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+
+        <a href="https://www.linkedin.com/in/reswanth-veerendra-karri-38bb7036a/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+      <a href="https://www.instagram.com/reswanth_karri/" target="_blank"><i class="fa-brands fa-instagram fa-2x" ></i></a>
+</div>
+</footer>
+
+</body>
+</html>
