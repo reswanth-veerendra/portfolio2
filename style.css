@@ -20,16 +20,16 @@
   font-family: "Cinzel", serif;
 }
 
-
+html{
+  scroll-behavior: smooth;
+}
     body{
       min-height:100vh;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color:#e8f9ff;
       scroll-behavior: smooth;
     }
-    html{
-  scroll-behavior: smooth;
-}
+
 .glass{
       background: rgba(255,255,255,0.08);
       backdrop-filter: blur(20px);
