@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reswanth | Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Lobster&family=Macondo&display=swap" rel="stylesheet">
- <script src="https://kit.fontawesome.com/2f2d4963fb.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/2f2d4963fb.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,76 +22,97 @@
       <a href="#skills">Skills</a>
     </div>
   </nav>
+
   <header class="glass">
     <div class="profile-wrap">
-   <div class="profile">
-    <img src="1000100428.jpg">
-   </div>
-</div>
+      <div class="profile">
+        <img src="1000100428.jpg">
+      </div>
+    </div>
 
     <h1>Reswanth Veerendra Karri</h1>
     <p>ECE Student • Curious Learner • Tech Enthusiast</p>
-
+    <button id="themeToggle">🌙</button>
   </header>
-  <main>
 
+  <main>
     <section class="glass">
+
       <article id="about" class="glass">
         <h2>About Me</h2>
         <p>
-  I am a B.Tech Electronics and Communication Engineering student at NIT Durgapur
-  with an interest in learning and self-improvement.
-  I enjoy working in teams, taking responsibility, and adapting to new environments.
-  Along with academics, I believe in developing communication skills and a disciplined mindset.
-</p>
-
+          I am a B.Tech Electronics and Communication Engineering student at NIT Durgapur
+          with an interest in learning and self-improvement.
+          I enjoy working in teams, taking responsibility, and adapting to new environments.
+        </p>
       </article>
-
       <article id="projects" class="glass">
         <h2>Projects</h2>
-        <a href="https://reswanth-veerendra.github.io/dicerollf/" target="_blank">• Dice Roller Web</a>
-        <a href="https://reswanth-veerendra.github.io/password/" target="_blank">• Password Generator</a>
-        <a href="https://reswanth-veerendra.github.io/calculator/" target="_blank">• Calculator</a>
-        <a href="https://reswanth-veerendra.github.io/stopwatch/" target="_blank">• Stopwatch</a>
-        <a href="https://reswanth-veerendra.github.io/realtime/" target="_blank">• Realtime</a>
 
+        <div class="project-cards">
+          <a class="project-card" href="https://reswanth-veerendra.github.io/dicerollf/" target="_blank">
+            <img src="dice.jpg" alt="Dice Roller">
+            <span>Dice Roller</span>
+          </a>
 
+          <a class="project-card" href="https://reswanth-veerendra.github.io/password/" target="_blank">
+            <img src="password.jpg" alt="Password Generator">
+            <span>Password Generator</span>
+          </a>
 
-        <a href="index.html">• Personal Portfolio Website</a>
+          <a class="project-card" href="https://reswanth-veerendra.github.io/calculator/" target="_blank">
+            <img src="calculator.jpg" alt="Calculator">
+            <span>Calculator</span>
+          </a>
+
+          <a class="project-card" href="https://reswanth-veerendra.github.io/stopwatch/" target="_blank">
+            <img src="stopwatch.jpg" alt="Stopwatch">
+            <span>Stopwatch</span>
+          </a>
+
+          <a class="project-card" href="https://reswanth-veerendra.github.io/realtime/" target="_blank">
+            <img src="clock.jpg" alt="Realtime Clock">
+            <span>Realtime</span>
+          </a>
+        </div>
       </article>
 
       <article id="skills" class="glass">
         <h2>Skills</h2>
-        <p>HTML • CSS </p>
-        <p>C Programming</p>
-        <p>Teamwork,Communication</p>
-      <p>Quick Learner</p>
-
+        <p>HTML • CSS • C Programming • Teamwork • Communication</p>
       </article>
+
     </section>
 
     <aside class="glass">
       <h2>Quick Info</h2>
       <ul>
         <li>B.Tech (ECE)</li>
-        <li> NIT Durgapur</li>
-        <li>Place:G.Mamidada,Kakinada,Andhra Pradesh</li>
+        <li>NIT Durgapur</li>
+        <li>Andhra Pradesh</li>
         <li>Aspiring Web Developer</li>
         <li>reswanthveerendrakarri@gmail.com</li>
       </ul>
     </aside>
-
   </main>
- <footer id="footer" class="glass">
+
+  <footer id="footer" class="glass">
     <p>© 2026</p>
-            <h3>Developed by Reswanth</h3>
-        <div class="icons">
-       <a href="https://www.facebook.com/profile.php?id=61576941945295" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+    <h3>Developed by Reswanth</h3>
+    <div class="icons">
+      <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+    </div>
+  </footer>
 
-        <a href="https://www.linkedin.com/in/reswanth-veerendra-karri-38bb7036a/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
-      <a href="https://www.instagram.com/reswanth_karri/" target="_blank"><i class="fa-brands fa-instagram fa-2x" ></i></a>
-</div>
-</footer>
-
+  <script>
+    const toggleBtn = document.getElementById("themeToggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light");
+      toggleBtn.textContent =
+        document.body.classList.contains("light") ? "☀️" : "🌙";
+    });
+  </script>
 </body>
 </html>
